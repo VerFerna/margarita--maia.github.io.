@@ -6,8 +6,9 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 const App = () => {
   return (
     <div>
+      
       <NavBar/>
-      <ItemListContainer greeting=" Primera PreEntrega Verushka Fernandez"/>
+
 
     </div>
   )

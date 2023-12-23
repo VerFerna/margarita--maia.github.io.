@@ -44,7 +44,7 @@ const NavBar = () => {
                 </NavDropdown.Item>
               </NavDropdown>
 
-               <NavDropdown title="Niños" id="basic-nav-dropdown">
+               <NavDropdown title="Kids" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Camisas</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Pantalones
