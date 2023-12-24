@@ -1,66 +1,33 @@
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.scss";
-
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
 const NavBar = () => {
   return (
     <header>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="#home">Margarita Maia</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+      <Link to="/">
+        <h1>Margarita Maia</h1>
+      </Link>
 
-              <NavDropdown title="Damas" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Camisas</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Pantalones
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Vestidos
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Otros
-                </NavDropdown.Item>
-              </NavDropdown>       
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/categoria/1">Camisas</NavLink>
+          </li>
+          <li>
+            <NavLink to="/categoria/2">Pantalones</NavLink>
+          </li>
 
-               <NavDropdown title="Caballeros" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Camisas</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Pantalones
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Trajes
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Otros
-                </NavDropdown.Item>
-              </NavDropdown>
+          <li>
+            <NavLink to="/categoria/3">Vestidos</NavLink>
+          </li>
+          <li>
+            <NavLink to="/categoria/4">Otros</NavLink>
+          </li>
+        </ul>
+      </nav>
 
-               <NavDropdown title="Kids" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Camisas</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Pantalones
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Otros
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#home">Contacto</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>       
-           <CartWidget />
-        </Container>
-
-      </Navbar>
+      <CartWidget />
     </header>
   );
 };
