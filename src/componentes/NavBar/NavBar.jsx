@@ -5,9 +5,9 @@ import "./NavBar.scss";
 const NavBar = () => {
   return (
     <header>
-      <Link to="/">
+      <NavLink to="/">
         <h1>Margarita Maia</h1>
-      </Link>
+      </NavLink>
 
       <nav>
         <ul>
